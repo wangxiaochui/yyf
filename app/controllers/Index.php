@@ -11,7 +11,7 @@ use Core\Yyf\App;
 class Index
 {
     public function index(){
-        //vue融合测试
+        //vue融合测试11
         App::view('home.vue.index');
     }
 
