@@ -74,7 +74,7 @@ class Router extends Macaw
                             self::$callbacks[$route] = str_replace('/','\\',self::$callbacks[$route]);
                         }
                         if(strstr(self::$callbacks[$route],$c_namespace)==false){
-                            self::$callbacks[$route] = $c_namespace.self::$callbacks[$route];
+                            self::$callbacks[$route] = $c_namespace.ucfirst(self::$callbacks[$route]);
 
                         }
                         // Grab all parts based on a / separator

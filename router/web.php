@@ -5,8 +5,8 @@
  */
 use Core\Yyf\Router;
 
-Router::get('/', 'index@index');
-Router::get('/user', 'user/index@test1');
+Router::get('/', 'Index@index');
+Router::get('/user', 'User/index@test1');
 
 Router::error(function() {
     try{
