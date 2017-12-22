@@ -1,0 +1,62 @@
+@background:#f7f7f7;
+@background_white: #ffffff;
+@border_single:0.5px solid #e6e6e6;
+@inline:inline-block;
+
+.mixin_font(@font-size:12){
+  font-size :@font-size * 1px;
+  [data-dpr="2"] & {
+    font-size: @font-size * 2px;
+  }
+  [data-dpr="3"] & {
+    font-size: @font-size * 3px;
+  }
+  [data-dpr="4"] & {
+    font-size: @font-size * 4px;
+  }
+}
+body{background:@background}
+#app {max-width:10rem;margin:0 auto;}
+/* 首页样式start*/
+/* 标题栏*/
+#header{width:100%;height:1rem;background:@background;line-height:1rem;left:0;top:0;display:block;position:fixed;z-index: 1000;border-bottom:@border_single}
+#title{.mixin_font(12)}
+
+/*底部工具栏*/
+.bar-tab{width:100%;height:1.2rem;background:@background;display:block;position:fixed;bottom:0;left:0;border-top:@border_single;text-align: center;}
+ul{list-style:none;padding:0;margin:0 ;}
+.bar-item{display: @inline;width:24%;text-align:center;height:1rem;padding-top:0.15rem}
+
+/*logo样式*/
+#logo {display:@inline;width:48%; }
+#logo .logo{margin-left:1rem;.mixin_font(14);font-weight:bold;}
+#heder-act{display:@inline;width:48%;text-align:right;height:1rem}
+.logo img{width:3rem;position:relative;top:0.2rem}
+
+/*栅格样式*/
+.jgg{display: flex;display: -webkit-flex; flex-wrap: wrap;margin-top:0.1rem }
+.jgg-item{width:4.9rem;height:5rem;border-right:0.03rem solid @background;border-bottom:0.03rem solid @background;flex-direction: row;background:@background_white;text-align: center;}
+.jgg-item img{width:4rem;height:3.6rem;border-radius: 0.1rem;margin-top:0.3rem}
+.jgg-item p{.mixin_font(12);font-weight:bold;color:indianred;margin-top:0.1rem}
+.font12{.mixin_font(10);}
+/*条目栏*/
+#ext{width:10rem;margin-top:0.2rem}
+.ext-item{width:100%;height:1.8rem;background:@background_white;display: flex;margin-bottom: 0.08rem}
+.ext-img{width:2rem;text-align: center}
+.flex-item{flex-direction: row;margin-top:0.2rem}
+.ext-img img{width:1.3rem;height:1.3rem;border-radius: 1rem}
+.ext-con{width:7.9rem;display: @inline}
+.ext-con h2{font-weight: bold;.mixin_font(15)}
+.ext-con p{color:gray}
+/* 首页样式end*/
+
+/*分类相关 start*/
+#category{width:10rem}
+.item-cate{width:10rem;display:flex;display: -webkit-flex; flex-wrap: wrap;height:1.5rem;border-bottom:0.06rem solid @background;background:#fff}
+.cate-col{flex-direction: row}
+.cage-item-img{width:2.5rem}
+.cage-item-img img{width:1.5rem;height:1.5rem;margin-left:0.5rem}
+.cage-item-con{width:6.5rem;line-height:1.5rem;}
+.cage-item-flag{width:1rem;line-height:1.5rem;}
+.cage-item-flag i{.mixin_font(25);color:darkgray}
+/*分类相关 end*/
