@@ -6,7 +6,7 @@
 use Core\Yyf\Router;
 
 Router::get('/', 'Index@index');
-Router::get('/user', 'User/index@test1');
+Router::get('/user', 'User/Index@test1');
 
 Router::error(function() {
     try{
