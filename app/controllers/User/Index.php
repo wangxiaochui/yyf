@@ -1,15 +1,15 @@
 <?php
 namespace App\Controller\User;
-use App\Model\User;
-use Core\Yyf\App;
-use core\yyf\Container;
-
 /**
  * Created by PhpStorm.
  * User: yanxs
  * Date: 2017/12/18
  * Time: 14:55
  */
+use App\Model\User;
+use Core\Yyf\App;
+use Core\Yyf\Container;
+
 class Index
 {
     public function test1(){
