@@ -4,6 +4,7 @@
  * User: yanxs
  * Date: 2017/12/18
  * Time: 14:27
+ * 依赖容器
  */
 
 namespace core\yyf;
@@ -20,6 +21,10 @@ class Container
     }
     private function __clone(){}
 
+    /**
+     * @param null $config
+     * @return Container
+     */
     public static function getInstance($config = null)
     {
         if(!(self::$instance instanceof self))
@@ -34,11 +39,19 @@ class Container
         return self::$instance;
     }
 
+    /**
+     * @param $key
+     * @param $val
+     */
     public static function set($key,$val)
     {
         self::$_store[$key] = $val;
     }
 
+    /**
+     * @param $key
+     * @return mixed
+     */
     public static function get($key)
     {
         $val = self::$_store[$key];
