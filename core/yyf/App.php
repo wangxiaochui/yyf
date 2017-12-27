@@ -1,4 +1,11 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: yanxs
+ * Date: 2017/12/18
+ * Time: 14:27
+ * 核心启动类
+ */
 namespace Core\Yyf;
 use Illuminate\Database\Capsule\Manager as Capsule;
 
@@ -8,17 +15,33 @@ class App{
     {
 
     }
+    /**
+     * 做配置注入，数据库初始连接
+     * @param $config
+     * @return null
+     */
     public static function run($config){
         //将配置注入容器
         Container::getInstance($config);
         Container::set('request',"Core\\Yyf\\Request");
 
         //数据库连接
-        $capsule = new Capsule;
+        $capsule = new Capsule();
         $capsule->addConnection($config['db']);
         $capsule->setAsGlobal();
         $capsule->bootEloquent();
+
+        Container::set('db',$capsule);
+        return true;
     }
+
+    /**
+     * 视图渲染
+     * @param $view
+     * @param array $data
+     * @return \Twig_Environment
+     * @throws \Exception
+     */
     public static function view($view, $data=[]){
         $is_twig = Container::get('is_twig');
         if($is_twig){

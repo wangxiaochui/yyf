@@ -4,6 +4,7 @@
  * User: yanxs
  * Date: 2017/12/18
  * Time: 16:34
+ * 视图渲染类
  */
 
 namespace Core\Yyf;

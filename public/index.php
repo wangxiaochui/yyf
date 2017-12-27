@@ -1,4 +1,5 @@
 <?php
+//入口文件
 define('BASE_PATH', __DIR__.'/../');
 require '../vendor/autoload.php';
 require '../core/yyf/App.php';
