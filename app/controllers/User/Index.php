@@ -20,4 +20,13 @@ class Index
         //设置is_is_twig来确定是否开启twig
         App::view('home.user.index',['member'=>$member]);
     }
+
+    public function db(){
+        //数据库操作
+        $info = Container::get('db')->table('user')->get()->toArray();
+        //$info = Container::get('db')->table('user')->select('username')->get()->toArray();
+        //参照 http://laravelacademy.org/post/6955.html
+       // var_dump(Container::get('request')->get('aa',0));
+        var_dump($info);exit;
+    }
 }

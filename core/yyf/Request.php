@@ -4,6 +4,7 @@
  * User: yanxs
  * Date: 2017/12/18
  * Time: 17:30
+ * get、post等操作
  */
 
 namespace Core\Yyf;
@@ -157,7 +158,8 @@ class Request
     public function get($name = null, $defaultValue = null)
     {
         if(isset($_GET[$name])){
-            return !empty($name)?$_GET[$name]:$_GET;
+            $ret =  !empty($name)?$_GET[$name]:$_GET;
+            return empty($ret)?$defaultValue:$ret;
         }else{
             return null;
         }
@@ -166,7 +168,8 @@ class Request
 
     public function post($name = null, $defaultValue = null){
         if(isset($_POST[$name])){
-            return !empty($name)?$_POST[$name]:$_POST;
+            $ret =  !empty($name)?$_POST[$name]:$_POST;
+            return empty($ret)?$defaultValue:$ret;
         }else{
             return null;
         }
