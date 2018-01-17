@@ -14,6 +14,15 @@ class Router extends Macaw
      * 自由路由
      */
     public static function free(){
+        $is_vue = Container::get('is_vue');
+
+        //就否用vue作为前端,vue作为前端，自定义的路由照样是有效的
+        if($is_vue){
+            $vue_html = Container::get('vue_html');
+            App::view($vue_html);
+            exit;
+        }
+
         $uri = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH),'/');
         $method = $_SERVER['REQUEST_METHOD'];
         $arr_uri = explode('/',$uri);
@@ -34,7 +43,6 @@ class Router extends Macaw
             }
             $controller = rtrim($controller,'\\');
             if (!method_exists($controller, $action)) {
-
                 throw new \Exception('404 not found');
             } else {
                 call_user_func_array(array($controller, $action), []);

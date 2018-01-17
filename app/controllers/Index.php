@@ -11,9 +11,6 @@ use Core\Yyf\App;
 class Index
 {
     public function index(){
-//        $router = new Router();
-//        $router->test();
-        //vue融合测试11
         App::view('home.vue.index');
     }
 

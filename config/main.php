@@ -21,4 +21,6 @@ return [
         'prefix'    => 'isms_'
 
     ],
+    'is_vue' => 1, //使用vue作为前端
+    'vue_html' => 'home.vue.index'
 ];

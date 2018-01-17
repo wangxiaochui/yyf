@@ -44,6 +44,7 @@ class App{
      */
     public static function view($view, $data=[]){
         $is_twig = Container::get('is_twig');
+        //$is_vue = Container::get('is_vue');
         if($is_twig){
             $path = BASE_PATH.Container::get('view_path');
             $loader = new \Twig_Loader_Filesystem($path);
