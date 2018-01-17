@@ -33,6 +33,7 @@ class ComposerStaticInit882d59f0efeced51832931a8ed8c670f
             'Symfony\\Component\\Yaml\\' => 23,
             'Symfony\\Component\\Translation\\' => 30,
             'Slim\\Http\\' => 10,
+            'Services\\' => 9,
         ),
         'P' => 
         array (
@@ -104,6 +105,10 @@ class ComposerStaticInit882d59f0efeced51832931a8ed8c670f
         'Slim\\Http\\' => 
         array (
             0 => __DIR__ . '/..' . '/slim/http/src',
+        ),
+        'Services\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/services',
         ),
         'Psr\\Http\\Message\\' => 
         array (

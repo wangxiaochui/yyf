@@ -12,7 +12,8 @@
     "psr-4": {
       "App\\Controller\\": "app/controllers",
       "App\\Model\\": "app/models",
-      "Core\\Yyf\\": "core/yyf"
+      "Core\\Yyf\\": "core/yyf",
+      "Services\\" : "services"
     }
   }
 }

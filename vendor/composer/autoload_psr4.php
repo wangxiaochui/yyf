@@ -13,6 +13,7 @@ return array(
     'Symfony\\Component\\Yaml\\' => array($vendorDir . '/symfony/yaml'),
     'Symfony\\Component\\Translation\\' => array($vendorDir . '/symfony/translation'),
     'Slim\\Http\\' => array($vendorDir . '/slim/http/src'),
+    'Services\\' => array($baseDir . '/services'),
     'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
     'NoahBuscher\\Macaw\\' => array($vendorDir . '/noahbuscher/macaw'),
     'Klein\\' => array($vendorDir . '/klein/klein/src/Klein'),
